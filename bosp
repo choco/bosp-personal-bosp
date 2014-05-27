@@ -1,0 +1,61 @@
+#!/bin/bash
+
+usage() {
+  echo "Usage: $0 <setup|update|devel|config]"
+  exit 1
+}
+
+if [ $# -lt 1 ]; then
+  usage
+fi
+
+message() {
+  echo
+  echo -e "\033[34m.:: $1\033[0m"
+}
+
+update() {
+  git fetch
+  git checkout -B bosp origin/bosp
+  message "Updating all BOSP modules..."
+  git submodule foreach git fetch
+}
+
+
+case $1 in
+setup)
+  message "Setup BOSP building system..."
+  git submodule init
+  git submodule update
+  git submodule foreach git checkout -B bosp origin/bosp
+  make bootstrap
+  ;;
+update)
+  update
+  message "Switching all BOSP modules to stable [bosp] branch..."
+  git submodule foreach git checkout -B bosp origin/bosp
+  ;;
+next)
+  update
+  message "Switching all BOSP modules to the development [bosp-next] branch..."
+  git submodule foreach git checkout -B bosp origin/bosp
+  ;;
+config)
+  message "Configuring BOSP building system..."
+  make menuconfig
+  ;;
+status)
+  message "Current BOSP modules configuration:"
+  git submodule status
+  ;;
+status-full)
+  message "Current BOSP modules full configuration:"
+  git submodule foreach git status -uno
+  ;;
+*)
+  usage
+esac
+
+echo
+echo
+
