@@ -1,0 +1,46 @@
+### What is this repository for? ###
+
+The BOSP is a self-contained building system, which provides not only the code
+of the BarbequeRTRM framework, bu also all its required software dependencies
+as well as the code of contributed examples.  All these contents are organized
+in modules managed using GIT submodule.
+
+This repository is the main BOSP repository which provide access to the
+tracking and management of all the dependency GIT submodules.
+
+This documentation refers to version 1.0 of the BOSP project and explains just
+how to setup the BOSP building system to compile the BarbequeRTRM framework.
+A detailed documentation on how to use the framework could be found starting
+from the main project website:
+[http://bosp.dei.polimi.it](http://bosp.dei.polimi.it)
+
+### How do I get set up? ###
+
+1) clone this repository within a convenient folder, e.g. /opt:
+
+  $ cd /opt && git clone https://bosp@bitbucket.org/bosp/bosp.git
+
+2) initialize all the BOSP modules:
+
+  $ git submodule init
+
+3) update all the BOSP modules to be at their last version:
+
+  $ git submodule update
+
+4) point all BOSP modules to the stable branch named "bosp":
+
+  $ git submodule foreach git checkout -B bosp origin/bosp
+
+5) bootstrap the BOSP building system:
+
+  $ make bootstrap
+
+6) configure the BOSP building system:
+
+  $ make menuconfig
+
+7) after your configuration has been completed, save and exit from menuconfig
+and than you are ready to build:
+
+  $ make

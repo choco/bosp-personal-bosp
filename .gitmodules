@@ -1,0 +1,102 @@
+
+# The BarbequeRTRM Framework
+[submodule "barbeque"]
+	path = barbeque
+	url = https://bitbucket.org/bosp/barbeque
+
+# Mandatory BOSP tools
+[submodule "build"]
+	path = build
+	url = https://bitbucket.org/bosp/build
+	ignore = dirty
+[submodule "external/tools/kconfig"]
+	path = external/tools/kconfig
+	url = https://bitbucket.org/bosp/external-kconfig
+	ignore = dirty
+[submodule "deployment"]
+	path = deployment
+	url = https://bitbucket.org/bosp/deployment
+	ignore = dirty
+[submodule "toolchains/arm"]
+	path = toolchains/arm
+	url = https://bitbucket.org/bosp/toolchains-arm
+	ignore = dirty
+
+# Externa REQUIRED modules
+[submodule "external/required/boost"]
+	path = external/required/boost
+	url = https://bitbucket.org/bosp/external-boost
+	ignore = dirty
+[submodule "external/required/log4cpp"]
+	path = external/required/log4cpp
+	url = https://bitbucket.org/bosp/external-log4cpp
+	ignore = dirty
+[submodule "external/required/ticpp"]
+	path = external/required/ticpp
+	url = https://bitbucket.org/bosp/external-ticpp
+	ignore = dirty
+[submodule "external/required/libcg"]
+	path = external/required/libcg
+	url = https://bitbucket.org/bosp/external-libcg
+	ignore = dirty
+
+# External OPTIONAL modules
+[submodule "external/optional/libjpeg"]
+	path = external/optional/libjpeg
+	url = https://bitbucket.org/bosp/external-libjpeg
+	ignore = dirty
+[submodule "external/optional/opencl"]
+	path = external/optional/opencl
+	url = https://bitbucket.org/bosp/external-opencl
+	ignore = dirty
+[submodule "external/optional/tbb40-u3"]
+	path = external/optional/tbb40-u3
+	url = https://bitbucket.org/bosp/external-libtbb
+	ignore = dirty
+[submodule "external/optional/v4l-utils"]
+	path = external/optional/v4l-utils
+	url = https://bitbucket.org/bosp/external-libv4l
+	ignore = dirty
+
+# External PARTIAL modules
+[submodule "external/partial/opencv"]
+	path = external/partial/opencv
+	url = https://bitbucket.org/bosp/external-opencv
+	ignore = dirty
+
+# Other TOOLs
+[submodule "external/tools/feedgnuplot"]
+	path = external/tools/feedgnuplot
+	url = https://bitbucket.org/bosp/external-feedgnuplot
+	ignore = dirty
+
+# Benchmarks
+[submodule "benchmarks/parsec-2.1"]
+	path = benchmarks/parsec-2.1
+	url = https://bitbucket.org/bosp/benchmarks-parsec
+	ignore = dirty
+
+# Contributed Apps - TESTING
+[submodule "contrib/testing/rtlib-testapp"]
+	path = contrib/testing/rtlib-testapp
+	url = https://bitbucket.org/bosp/contrib-rtlib-testapp
+	ignore = dirty
+[submodule "contrib/testing/demoapp"]
+	path = contrib/testing/demoapp
+	url = https://bitbucket.org/bosp/contrib-demoapp
+	ignore = dirty
+
+# Contributed Apps - USER
+[submodule "contrib/user/rtlib-tutorials"]
+	path = contrib/user/rtlib-tutorials
+	url = https://bitbucket.org/bosp/contrib-rtlib-tutorials
+	ignore = dirty
+[submodule "contrib/user/ocvdemo"]
+	path = contrib/user/ocvdemo
+	url = https://bitbucket.org/bosp/contrib-ocvdemo
+	ignore = dirty
+[submodule "contrib/user/ocl-samples"]
+	path = contrib/user/ocl-samples
+	url = https://bitbucket.org/bosp/contrib-ocl-samples
+	ignore = dirty
+
