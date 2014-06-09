@@ -1,7 +1,16 @@
 #!/bin/bash
 
 usage() {
-  echo "Usage: $0 <setup|update|devel|config]"
+  echo "Usage: $0 <command>"
+  echo
+  echo "where <command> could be:"
+  echo "- boostrap      : bootstrap the building system"
+  echo "- config        : configure a build"
+  echo "- setup         : intialize the source tree"
+  echo "- status        : dump short status for each module"
+  echo "- status-full   : dump detaild status for each module"
+  echo "- udpate-devel  : update the source tree to the last stable version"
+  echo "- update-stable : update the source tree to the most advanced development version"
   exit 1
 }
 
@@ -30,15 +39,19 @@ setup)
   git submodule foreach git checkout -B bosp origin/bosp
   make bootstrap
   ;;
-update)
-  update
+update-stable)
   message "Switching all BOSP modules to stable [bosp] branch..."
+  git submodule update
   git submodule foreach git checkout -B bosp origin/bosp
   ;;
-next)
-  update
+update-devel)
   message "Switching all BOSP modules to the development [bosp-next] branch..."
-  git submodule foreach git checkout -B bosp origin/bosp
+  git submodule update
+  git submodule foreach git checkout -B bosp origin/bosp-next
+  ;;
+bootstrap)
+  message "Bootstrapping BOSP building system..."
+  make bootstrap
   ;;
 config)
   message "Configuring BOSP building system..."
