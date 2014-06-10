@@ -36,17 +36,20 @@ setup)
   message "Setup BOSP building system..."
   git submodule init
   git submodule update
+  git submodule foreach git fetch
   git submodule foreach git checkout -B bosp origin/bosp
   make bootstrap
   ;;
 update-stable)
   message "Switching all BOSP modules to stable [bosp] branch..."
   git submodule update
+  git submodule foreach git fetch
   git submodule foreach git checkout -B bosp origin/bosp
   ;;
 update-devel)
   message "Switching all BOSP modules to the development [bosp-next] branch..."
   git submodule update
+  git submodule foreach git fetch
   git submodule foreach git checkout -B bosp origin/bosp-next
   ;;
 bootstrap)
