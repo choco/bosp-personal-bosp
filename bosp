@@ -3,14 +3,30 @@
 usage() {
   echo "Usage: $0 <command>"
   echo
-  echo "where <command> could be:"
-  echo "- boostrap      : bootstrap the building system"
-  echo "- config        : configure a build"
+  echo "where <command> could be one of the following commands, depending"
+  echo "on the development needs."
+  echo
+  echo ".:: BOSP Setup"
   echo "- setup         : intialize the source tree"
+  echo "    This command is require just the first time to properly setup"
+  echo "    the BOSP source tree"
+  echo
+  echo ".:: BOSP Configuration"
+  echo "- boostrap      : bootstrap the building system"
+  echo "    Setup the BOSP building system to track all the submodules"
+  echo "    which expose a Kconf/bosp.mk pair"
+  echo "- config        : configure a build"
+  echo "    Start a configuration of the BOSP building system"
+  echo
+  echo ".:: BOSP Update"
+  echo "- udpate-devel  : update the source tree to the last stable version"
+  echo "    Setup the BOSP building system to track the most recent development version"
+  echo "- update-stable : update the source tree to the most advanced development version"
+  echo "    Setup the BOSP building system to track the most recent stable version"
+  echo
+  echo ".:: BOSP Status"
   echo "- status        : dump short status for each module"
   echo "- status-full   : dump detaild status for each module"
-  echo "- udpate-devel  : update the source tree to the last stable version"
-  echo "- update-stable : update the source tree to the most advanced development version"
   exit 1
 }
 
