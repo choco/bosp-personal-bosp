@@ -61,6 +61,10 @@
 	path = external/optional/v4l-utils
 	url = https://bitbucket.org/bosp/external-libv4l
 	ignore = dirty
+[submodule "external/optional/argo"]
+	path = external/optional/argo
+	url = https://bitbucket.org/bosp/external-argo
+	ignore = dirty
 
 # External PARTIAL modules
 [submodule "external/partial/opencv"]
