@@ -107,4 +107,8 @@
 	path = contrib/user/ocl-samples
 	url = https://bitbucket.org/bosp/contrib-ocl-samples
 	ignore = dirty
+[submodule "contrib/user/mview-demo-argo"]
+	path = contrib/user/mview-demo-argo
+	url = https://bitbucket.org/bosp/contrib-mview-demo-argo
+	ignore = dirty
 
