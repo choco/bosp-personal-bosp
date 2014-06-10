@@ -39,6 +39,10 @@
 	path = external/required/libcg
 	url = https://bitbucket.org/bosp/external-libcg
 	ignore = dirty
+[submodule "external/required/sysfsutils"]
+	path = external/required/sysfsutils
+	url = https://bitbucket.org/bosp/external-libsysfs
+	ignore = dirty
 
 # External OPTIONAL modules
 [submodule "external/optional/libjpeg"]
@@ -100,6 +104,3 @@
 	url = https://bitbucket.org/bosp/contrib-ocl-samples
 	ignore = dirty
 
-[submodule "external/required/sysfsutils"]
-	path = external/required/sysfsutils
-	url = git@bitbucket.org:bosp/external-libsysfs.git
