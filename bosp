@@ -58,14 +58,14 @@ setup)
   ;;
 update-stable)
   message "Switching all BOSP modules to stable [bosp] branch..."
-  git pull
-  git submodule foreach git fetch
+  git pull --prune
+  git submodule foreach git fetch --prune
   git submodule foreach git checkout -B bosp origin/bosp
   ;;
 update-devel)
   message "Switching all BOSP modules to the development [bosp-next] branch..."
-  git pull
-  git submodule foreach git fetch
+  git pull --prune
+  git submodule foreach git fetch --prune
   git submodule foreach git checkout -B bosp origin/bosp-next
   ;;
 bootstrap)
