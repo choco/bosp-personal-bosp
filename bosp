@@ -46,6 +46,12 @@ update() {
   git submodule foreach git fetch
 }
 
+update() {
+  message "Update BOSP main module..."
+  git pull --prune
+  message "Sync all BOSP tracked modules..."
+  git submodule foreach git fetch --prune
+}
 
 case $1 in
 setup)
@@ -57,15 +63,13 @@ setup)
   make bootstrap
   ;;
 update-stable)
+  update
   message "Switching all BOSP modules to stable [bosp] branch..."
-  git pull --prune
-  git submodule foreach git fetch --prune
   git submodule foreach git checkout -B bosp origin/bosp
   ;;
 update-devel)
+  update
   message "Switching all BOSP modules to the development [bosp-next] branch..."
-  git pull --prune
-  git submodule foreach git fetch --prune
   git submodule foreach git checkout -B bosp origin/bosp-next
   ;;
 bootstrap)
