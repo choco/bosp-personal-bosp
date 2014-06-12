@@ -50,10 +50,19 @@ error() {
 }
 
 update() {
+  BRANCH=$1
+  LABEL=stable
+  [ $BRANCH == "bosp-next" ] && LABEL="development"
   message "Update BOSP main module..."
   git pull --prune
   message "Sync all BOSP tracked modules..."
   git submodule foreach git fetch --prune
+  message "Switching all BOSP modules to '$LABEL' [$BRANCH] branch..."
+  git submodule foreach git checkout -B bosp origin/$BRANCH
+  message "Bootstrapping BOSP building system..."
+  make bootstrap
+  message "Configuring BOSP building system..."
+  make menuconfig
 }
 
 case $1 in
@@ -73,22 +82,10 @@ setup)
   make bootstrap
   ;;
 update-stable)
-  update
-  message "Switching all BOSP modules to stable [bosp] branch..."
-  git submodule foreach git checkout -B bosp origin/bosp
-  message "Bootstrapping BOSP building system..."
-  make bootstrap
-  message "Configuring BOSP building system..."
-  make menuconfig
+  update bosp
   ;;
 update-devel)
-  update
-  message "Switching all BOSP modules to the development [bosp-next] branch..."
-  git submodule foreach git checkout -B bosp origin/bosp-next
-  message "Bootstrapping BOSP building system..."
-  make bootstrap
-  message "Configuring BOSP building system..."
-  make menuconfig
+  update bosp-next
   ;;
 bootstrap)
   message "Bootstrapping BOSP building system..."
