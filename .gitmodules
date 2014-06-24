@@ -43,6 +43,10 @@
 	path = external/required/sysfsutils
 	url = https://bitbucket.org/bosp/external-libsysfs
 	ignore = dirty
+[submodule "external/required/rapidxml"]
+	path = external/required/rapidxml
+	url = https://bitbucket.org/bosp/external-rapidxml
+	ignore = dirty
 
 # External OPTIONAL modules
 [submodule "external/optional/libjpeg"]
