@@ -53,6 +53,9 @@ update() {
   BRANCH=$1
   LABEL=stable
   [ $BRANCH == "bosp-next" ] && LABEL="development"
+  message "Checking if new modules have been addedd..."
+  git submodule init
+  git submodule update
   message "Update BOSP main module..."
   git pull --prune
   message "Sync all BOSP tracked modules..."
