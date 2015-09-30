@@ -93,8 +93,8 @@
 	path = contrib/testing/rtlib-testapp
 	url = https://bitbucket.org/bosp/contrib-rtlib-testapp
 	ignore = dirty
-[submodule "contrib/testing/demoapp"]
-	path = contrib/testing/demoapp
+[submodule "contrib/testing/rtlib-demoapp"]
+	path = contrib/testing/rtlib-demoapp
 	url = https://bitbucket.org/bosp/contrib-demoapp
 	ignore = dirty
 
