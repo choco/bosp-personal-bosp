@@ -63,7 +63,8 @@ update() {
   message "Checking if new modules have been added..."
   init
   message "Update BOSP main module..."
-  git pull --prune
+  git checkout $BRANCH
+  git pull origin $BRANCH --prune
   message "Sync all BOSP tracked modules..."
   git submodule foreach git fetch --prune
   message "Switching all BOSP modules to '$LABEL' [$BRANCH] branch..."
