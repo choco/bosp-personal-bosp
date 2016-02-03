@@ -49,13 +49,19 @@ error() {
   echo -e "\033[31m[ERR] $1\033[0m"
 }
 
+init() {
+  message "Initialize BOSP main module..."
+  git submodule init
+  message "Initialize all BOSP tracked modules..."
+  git submodule update
+}
+
 update() {
   BRANCH=$1
   LABEL=stable
   [ $BRANCH == "bosp-next" ] && LABEL="development"
-  message "Checking if new modules have been addedd..."
-  git submodule init
-  git submodule update
+  message "Checking if new modules have been added..."
+  init
   message "Update BOSP main module..."
   git pull --prune
   message "Sync all BOSP tracked modules..."
@@ -74,10 +80,8 @@ setup)
     warning "BOSP setup already done\n" && \
     usage && \
     return 1
-  message "Initialize BOSP main module..."
-  git submodule init
-  message "Initialize all BOSP tracked modules..."
-  git submodule update
+  message "Initialize modules..."
+  init
   message "Sync all BOSP tracked modules..."
   git submodule foreach git fetch
   message "Switching all BOSP modules to stable [bosp] branch..."
