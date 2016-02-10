@@ -82,6 +82,12 @@
 	url = https://bitbucket.org/bosp/external-feedgnuplot
 	ignore = dirty
 
+[submodule "external/tools/event-viewer"]
+	path = external/tools/event-viewer
+	url = https://bosp@bitbucket.org/bosp/external-tools-eventviewer.git
+	ignore = dirty
+
+
 # Benchmarks
 [submodule "benchmarks/parsec-2.1"]
 	path = benchmarks/parsec-2.1
