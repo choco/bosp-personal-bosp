@@ -57,6 +57,10 @@
 	path = external/optional/opencl
 	url = https://bitbucket.org/bosp/external-opencl
 	ignore = dirty
+[submodule "external/optional/ompi"]
+	path = external/optional/ompi
+	url = https://github.com/federeghe/ompi.git
+	ignore = dirty
 [submodule "external/optional/tbb40-u3"]
 	path = external/optional/tbb40-u3
 	url = https://bitbucket.org/bosp/external-libtbb
