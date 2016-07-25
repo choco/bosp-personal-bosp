@@ -75,7 +75,7 @@
 	ignore = dirty
 [submodule "external/optional/grpc"]
 	path = external/optional/grpc
-	url = git@bitbucket.org:bosp/external-grpc.git
+	url = https://bosp@bitbucket.org/bosp/external-grpc.git
 
 # External PARTIAL modules
 [submodule "external/partial/opencv"]
