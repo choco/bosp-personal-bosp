@@ -68,7 +68,7 @@ update() {
   message "Sync all BOSP tracked modules..."
   git submodule foreach git fetch --prune
   message "Switching all BOSP modules to '$LABEL' [$BRANCH] branch..."
-  git submodule foreach git checkout -B bosp origin/$BRANCH
+  git submodule foreach git checkout -B $BRANCH origin/$BRANCH
   message "Bootstrapping BOSP building system..."
   make bootstrap
   message "Configuring BOSP building system..."
