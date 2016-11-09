@@ -12,7 +12,7 @@ usage() {
   echo "    the BOSP source tree"
   echo
   echo ".:: BOSP Configuration"
-  echo "- boostrap      : bootstrap the building system"
+  echo "- bootstrap      : bootstrap the building system"
   echo "    Setup the BOSP building system to track all the submodules"
   echo "    which expose a Kconf/bosp.mk pair"
   echo "- config        : configure a build"
