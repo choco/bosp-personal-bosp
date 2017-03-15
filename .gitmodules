@@ -76,6 +76,9 @@
 [submodule "external/optional/grpc"]
 	path = external/optional/grpc
 	url = https://bosp@bitbucket.org/bosp/external-grpc.git
+[submodule "external/optional/pybind11"]
+	path = external/optional/pybind11
+	url = git@github.com:choco/bosp-external-pybind.git
 
 # External PARTIAL modules
 [submodule "external/partial/opencv"]
