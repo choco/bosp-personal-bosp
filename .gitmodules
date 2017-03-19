@@ -113,6 +113,10 @@
 	path = contrib/testing/rtlib-demoapp
 	url = https://bitbucket.org/bosp/contrib-demoapp
 	ignore = dirty
+[submodule "contrib/testing/rtlib-python-bindings-testapp"]
+	path = contrib/testing/rtlib-python-bindings-testapp
+	url = git@github.com:choco/bosp-contrib-python-bindings-testapp.git
+	ignore = dirty
 
 # Contributed Apps - USER
 [submodule "contrib/user/rtlib-tutorials"]
