@@ -2,7 +2,7 @@
 # The BarbequeRTRM Framework
 [submodule "barbeque"]
 	path = barbeque
-	url = https://bitbucket.org/bosp/barbeque
+	url = https://github.com/choco/bosp-personal-barbeque
 
 # Mandatory BOSP tools
 [submodule "build"]
